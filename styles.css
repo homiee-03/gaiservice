@@ -1,0 +1,235 @@
+:root {
+  --bg: #070b1a;
+  --surface: #11172c;
+  --text: #f7f9ff;
+  --muted: #b9c2df;
+  --primary: #5eead4;
+  --secondary: #7c8dff;
+  --highlight: #ffca75;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(94, 234, 212, 0.15), transparent 28%),
+    radial-gradient(circle at 90% 0%, rgba(124, 141, 255, 0.18), transparent 30%),
+    var(--bg);
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.innovation-strip {
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, rgba(94, 234, 212, 0.12), rgba(124, 141, 255, 0.12));
+}
+
+.innovation-track {
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  white-space: nowrap;
+  min-width: 200%;
+  animation: ticker 24s linear infinite;
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hero {
+  padding: 4rem 0 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.tag {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  line-height: 1.15;
+  margin: 0.25rem 0 1rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.hero-cta {
+  margin: 1.6rem 0;
+  display: flex;
+  gap: 0.85rem;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #070b1a;
+}
+
+.btn.ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.trust-bar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  position: relative;
+  min-height: 320px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(17, 23, 44, 0.7);
+  backdrop-filter: blur(7px);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(6px);
+}
+
+.orb-one {
+  width: 180px;
+  height: 180px;
+  right: -40px;
+  top: -40px;
+  background: rgba(94, 234, 212, 0.35);
+}
+
+.orb-two {
+  width: 160px;
+  height: 160px;
+  left: -55px;
+  bottom: -45px;
+  background: rgba(124, 141, 255, 0.35);
+}
+
+.dashboard-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  background: rgba(7, 11, 26, 0.8);
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  margin-bottom: 1.4rem;
+}
+
+.grid.three {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.price-card {
+  background: rgba(17, 23, 44, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.card p,
+.price-card ul,
+.payment-section p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.price-card .plan {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.price-card h3 {
+  margin: 0 0 1rem;
+}
+
+.price-card button {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #d8def9;
+}
+
+.price-card.featured {
+  box-shadow: 0 12px 36px rgba(94, 234, 212, 0.18);
+  border-color: rgba(94, 234, 212, 0.6);
+}
+
+.price-card.featured button {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #070b1a;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.payment-grid span {
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.footer {
+  padding: 2rem 0 2.6rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
+}
