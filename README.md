@@ -1,6 +1,9 @@
-# gaiservice
+# GAURAV AI SERVICES Clone
 
-Professional single-page AI sales website.
+This project is an educational clone shell for:
+- https://gauravaiservices.replit.app
+
+It preserves the original site’s structure, styles, assets, and client-side behavior by loading the upstream production bundle.
 
 ## Run locally
 
@@ -8,4 +11,10 @@ Professional single-page AI sales website.
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173`.
+Then open:
+- http://localhost:4173
+
+## Notes
+
+- This repository is for learning and UI replication practice only.
+- All original branding/content belongs to the respective owner.
